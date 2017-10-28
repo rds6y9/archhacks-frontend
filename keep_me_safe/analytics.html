@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Keep Me Safe</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/analytics.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <a class="navbar-brand" href="#">Keep Me Safe</a>
+    </nav>
+
+    <div class="body-container">
+      <div class="content-container">
+        <div class="contact-container row">
+          <div class="contact-module col-md-3">
+            <div class="contact-wrapper">
+              <div class="contact-info-wrapper">
+                <img class="contact-pic" src="images/ryan_pic.png" alt="">
+                <h3>Ryan Stoughton</h3>
+                <ul>
+                  <li>(314) 596 - 8101</li>
+                  <li>rds6y9@mst.edu</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="contact-module col-md-3">
+            <div class="contact-wrapper">
+              <div class="contact-info-wrapper">
+                <img class="contact-pic" src="images/dylan_pic.png" alt="">
+                <h3>Dylan Elznic</h3>
+                <ul>
+                  <li>(314) 359 - 5216</li>
+                  <li>djey96@mst.edu</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="contact-module col-md-3">
+            <div class="contact-wrapper contact-unoccupied">
+              <div class="contact-info-wrapper">
+                <img class="contact-pic" src="images/empty_contact.png" alt="">
+                <form method="POST">
+                  <input class="new-contact-input" type="text" name="" placeholder="Enter Contact Name">
+                  <input class="new-contact-input" type="text" name="" placeholder="Enter Contact Number">
+                  <input class="new-contact-input" type="text" name="" placeholder="Enter Contact Email">
+                  <input type="submit" name="" value="Submit">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="contact-module col-md-3">
+            <div class="contact-wrapper contact-unoccupied">
+              <div class="contact-info-wrapper">
+                <img class="contact-pic" src="images/empty_contact.png" alt="">
+                <form method="POST">
+                  <input class="new-contact-input" type="text" name="" placeholder="Enter Contact Name">
+                  <input class="new-contact-input" type="text" name="" placeholder="Enter Contact Number">
+                  <input class="new-contact-input" type="text" name="" placeholder="Enter Contact Email">
+                  <input type="submit" name="" value="Submit">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="big-graph-container row">
+          <div class="graph-module col-md-6">
+            <div class="scatter-graph big-graph">
+              <canvas id="myScatterChart" width="200" height="155"></canvas>
+              <script type="text/javascript">
+                var scatterChart = document.getElementById("myScatterChart");
+                var myScatterChart = new Chart(scatterChart, {
+                  type: 'scatter',
+                  options: {
+                    scales: {
+                        xAxes: [{
+                            position: 'bottom',
+                            scaleLabel: {
+                              display: true,
+                              labelString: 'Day of Week'
+                            },
+                            ticks: {
+                              source: 'labels'
+                            },
+                            labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+                        }],
+                        yAxes: [{
+                            position: 'left',
+                            scaleLabel: {
+                              display: true,
+                              labelString: 'Time of Day'
+                            },
+                            ticks: {
+                              source: 'labels'
+                            },
+                            labels: ['6a', '7a', '8a', '9a', '10a', '11a', '12p', '1p', '2p', '3p', '4p', '5p', '6p', '7p', '8p', '9p', '10p', '11p', '12a', '1a', '2a', '3a', '4a', '5a']
+                        }]
+                    },
+                    title: {
+                      display: true,
+                      text: 'Time of Day KeepMeSafe is Requested'
+                    }
+                  }
+                });
+
+                // type: 'scatter',
+                // options: {
+                //   scales: {
+                //       xAxes: [{
+                //           position: 'bottom',
+                //           scaleLabel: {
+                //             display: true,
+                //             labelString: 'Day of Week'
+                //           },
+                //           ticks: {
+                //             source: 'labels'
+                //           },
+                //           labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+                //       }],
+                //       yAxes: [{
+                //           position: 'left',
+                //           scaleLabel: {
+                //             display: true,
+                //             labelString: 'Time of Day'
+                //           },
+                //           ticks: {
+                //             source: 'labels'
+                //           },
+                //           labels: ['6a', '7a', '8a', '9a', '10a', '11a', '12p', '1p', '2p', '3p', '4p', '5p', '6p', '7p', '8p', '9p', '10p', '11p', '12a', '1a', '2a', '3a', '4a', '5a']
+                //       }]
+                //   },
+                //   title: {
+                //     display: true,
+                //     text: 'Time of Day KeepMeSafe is Requested'
+                //   }
+                // }
+              </script>
+            </div>
+          </div>
+          <div class="graph-module col-md-6">
+            <div class="line-graph big-graph">
+              <canvas id="myLineChart" width="200" height="155"></canvas>
+              <script type="text/javascript">
+                var lineChart = document.getElementById("myLineChart");
+                var myLineChart = new Chart(lineChart, {
+                  type: 'line',
+                  options: {
+                    scales: {
+                        xAxes: [{
+                            position: 'bottom',
+                            scaleLabel: {
+                              display: true,
+                              labelString: 'Time'
+                            },
+                            ticks: {
+                              source: 'labels'
+                            },
+                            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+                        }],
+                        yAxes: [{
+                            type: 'linear',
+                            position: 'left',
+                            scaleLabel: {
+                              display: true,
+                              labelString: 'Invocations'
+                            },
+                            ticks: {
+                              beginAtZero: true
+                            }
+                        }]
+                    },
+                    title: {
+                      display: true,
+                      text: 'Times KeepMeSafe Has Been Requested'
+                    }
+                  }
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="small-graph-container row">
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

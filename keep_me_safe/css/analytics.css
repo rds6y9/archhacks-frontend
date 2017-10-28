@@ -1,0 +1,89 @@
+html, body {
+  height: 100%;
+  margin: auto;
+}
+
+body {
+  min-height: 100%;
+}
+
+.body-container {
+  min-height: 100%;
+  width: 100%;
+  padding: 80px 5% 0 5%;
+  background-color: green;
+}
+
+.content-container {
+  height: 100%;
+  width: 100%;
+  background-color: cyan;
+}
+
+.contact-container {
+  height: 270px;
+  margin: 0;
+}
+
+.contact-module {
+  height: 270px;
+  padding: 10px;
+  background-color: blue;
+}
+
+.contact-wrapper {
+  height: 100%;
+  border-radius: 4px;
+  background-color: white;
+  text-align: center;
+}
+
+.contact-info-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto;
+  /*background-color: red;*/
+}
+
+.contact-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.contact-unoccupied {
+  border: 3px dashed black;
+}
+
+.new-contact-input {
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.big-graph-container {
+  height: 540px;
+  margin: 0;
+  background-color: yellow;
+}
+
+.graph-module {
+  height: 540px;
+  padding: 10px;
+  background-color: beige;
+}
+
+.big-graph {
+  height: 100%;
+  background-color: white;
+}
+
+.small-graph-container {
+  height: 540px;
+  margin: 0;
+  background-color: grey;
+}

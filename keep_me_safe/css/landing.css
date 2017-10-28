@@ -1,0 +1,106 @@
+/* Purple: #9C27B0 */
+
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #9C27B0;
+}
+
+.logo {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.login {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.login-form {
+  margin-left: 10px;
+}
+
+.form-label {
+  display: block;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.form-label:nth-child(1) {
+  padding-top: 100px;
+}
+
+.form-field {
+  display: block;
+  width: auto;
+  padding: 10px 0px;
+  border: none;
+  /*border-bottom: 2px solid #9C27B0;*/
+}
+
+.underline-field {
+  width: 35%;
+  height: 3px;
+  background-color: black;
+  transition: all .13s ease-out;
+}
+
+.email-field:focus + .email-underline {
+  width: 97%;
+  background-color: #9C27B0;
+}
+
+.password-field:focus + .password-underline {
+  width: 97%;
+  background-color: #9C27B0;
+}
+
+.login-button {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  width: 40%;
+	background-color:#c123de;
+	-moz-border-radius:40px;
+	-webkit-border-radius:40px;
+	border-radius:40px;
+	border:1px solid #a511c0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px 30px;
+	text-decoration:none;
+	/*text-shadow:0px 1px 0px #9b14b3;*/
+}
+
+.login-button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a20dbd), color-stop(1, #c123de));
+	background:-moz-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+	background:-webkit-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+	background:-o-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+	background:-ms-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+	background:linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a20dbd', endColorstr='#c123de',GradientType=0);
+	background-color: #9C27B0;
+}
+
+.register-message {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0px;
+  bottom: 10px;
+  text-align: center;
+}
